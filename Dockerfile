@@ -1,15 +1,15 @@
 FROM frolvlad/alpine-glibc:alpine-3.9
 
 ENV JAVA_VERSION=8 \
-    JAVA_UPDATE=202 \
+    JAVA_UPDATE=201 \
     JAVA_BUILD=08 \
     JAVA_PATH=1961070e4c9b4e26a04e7f5a083f551e \
     JAVA_HOME="/usr/lib/jvm/default-jvm"
 
 RUN apk add --no-cache --virtual=build-dependencies wget ca-certificates unzip && \
     cd "/tmp" && \
-    wget --header "Cookie: oraclelicense=accept-securebackup-cookie;" \
-        "http://download.oracle.com/otn-pub/java/jdk/${JAVA_VERSION}u${JAVA_UPDATE}-b${JAVA_BUILD}/${JAVA_PATH}/jdk-${JAVA_VERSION}u${JAVA_UPDATE}-linux-x64.tar.gz" && \
+    wget "http://dasdsa.oss-cn-hangzhou.aliyuncs.com/o_1d923dtaum50ioa1tja121r125fa.gz" \
+     -O "jdk-${JAVA_VERSION}u${JAVA_UPDATE}-linux-x64.tar.gz" && \
     tar -xzf "jdk-${JAVA_VERSION}u${JAVA_UPDATE}-linux-x64.tar.gz" && \
     mkdir -p "/usr/lib/jvm" && \
     mv "/tmp/jdk1.${JAVA_VERSION}.0_${JAVA_UPDATE}" "/usr/lib/jvm/java-${JAVA_VERSION}-oracle" && \
