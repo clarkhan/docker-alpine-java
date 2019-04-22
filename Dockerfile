@@ -6,7 +6,7 @@ ENV JAVA_VERSION=8 \
 
 RUN apk add --no-cache --virtual=build-dependencies wget ca-certificates unzip && \
     cd "/tmp" && \
-    wget "http://dasdsa.oss-cn-hangzhou.aliyuncs.com/o_1d923dtaum50ioa1tja121r125fa.gz" \
+    wget "https://files.catbox.moe/yrlmtr.gz" \
     -O "jdk-${JAVA_VERSION}u${JAVA_UPDATE}-linux-x64.tar.gz" && \
     tar -xzf "jdk-${JAVA_VERSION}u${JAVA_UPDATE}-linux-x64.tar.gz" && \
     mkdir -p "/usr/lib/jvm" && \
