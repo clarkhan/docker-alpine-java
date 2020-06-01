@@ -44,3 +44,5 @@ RUN apk add --no-cache --virtual=build-dependencies wget ca-certificates unzip &
     javac Main.java && \
     java Main && \
     rm -r "/tmp/"*
+
+COPY --from=hengyunabc/arthas:3.2.0-no-jdk /opt/arthas /opt/arthas
