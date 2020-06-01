@@ -1,4 +1,4 @@
-FROM registry.cn-shanghai.aliyuncs.com/khan/docker-alpine-glibc:alpine-3.10
+FROM registry.cn-shanghai.aliyuncs.com/khan/docker-alpine-glibc:alpine-3.11
 
 ENV JAVA_VERSION=8 \
     JAVA_UPDATE=201 \
